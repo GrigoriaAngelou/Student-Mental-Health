@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Student Mental Health">
+    <meta name="description" content="This Data set was collected by a survey conducted by Google forms from University student in order to examine their current academic situation and mental health. The data set was downloaded from https://www.kaggle.com/ I discover and handle incorrect data, inconsistencies, and missing values with python Notebook. And, I visualize the data using pivot tables in Excel making different plots to answer questions. Finally, I write an article on my Portofolio projects explaining my findings.">
+    <title>Student mental health</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Student-mental-health.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.11.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Student mental health">
+    <meta property="og:description" content="This Data set was collected by a survey conducted by Google forms from University student in order to examine their current academic situation and mental health. The data set was downloaded from https://www.kaggle.com/ I discover and handle incorrect data, inconsistencies, and missing values with python Notebook. And, I visualize the data using pivot tables in Excel making different plots to answer questions. Finally, I write an article on my Portofolio projects explaining my findings.">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Student-mental-health.html" data-home-page-title="Student mental health" class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-dca2"><div class="u-align-left u-clearfix u-sheet u-sheet-1"></div></header>
+    <section class="u-border-2 u-border-palette-1-base u-clearfix u-grey-10 u-section-1" id="sec-4376">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/979726032-0.jpeg" alt="" data-image-width="640" data-image-height="480">
+        <div class="u-border-3 u-border-palette-1-base u-container-style u-grey-10 u-group u-group-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <h1 class="u-text u-text-default-xl u-text-palette-1-base u-text-1">Student Mental Health</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-8b16">
+      <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">The Data set that has been used for this article was collected by a survey conducted by Google forms from University student in order to examine their current academic situation and mental health.​You can find all my calculations, visualizations and datasets that I used in this analysis in my Githubpage <a href="https://github.com/GrigoriaAngelou/student-mental-health" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">here.</a>
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-2a04">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-1">What is mental health and why is it so important?</h2>
+        <p class="u-text u-text-2">Mental health&nbsp;<b>includes our emotional, psychological, and social well-being</b>. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood. But, poor mental health is a problem that appears more and more in adolescence. Feelings of anxiety, depression and panic attack deluge the youth, causing behavioral&nbsp; and bad temper problems in them. I used a dataset from&nbsp;<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://www.kaggle.com/">Kaggle</a>, which is from a ​questionnaire&nbsp;on the effects of mental health on University students' CGPA. It is a rather small sample but it can say a lot about student's mental health and if this is related to their academic situation.
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-0205">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout" style="">
+            <div class="u-layout-row" style="">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-size-xs-60 u-white u-layout-cell-1" src="">
+                <div class="u-container-layout u-valign-bottom-lg u-container-layout-1">
+                  <h3 class="u-align-center u-text u-text-default u-text-1">Explaining the dataset</h3>
+                  <p class="u-align-left u-text u-text-2"><span class="u-icon"></span>&nbsp;In this survey, they took part 100 University students. The 25% was male and 75% was female students and their ages where between 18 to 24 years old. As we can observe we do not have many students between 21 and 22 years old.&nbsp;<br>
+                    <br>
+                  </p>
+                  <img class="u-image u-image-default u-image-1" src="images/agedistribution.png" alt="" data-image-width="450" data-image-height="359">
+                  <img class="u-image u-image-default u-image-2" src="images/genderdistribution2.png" alt="" data-image-width="427" data-image-height="363">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-5" id="sec-9456">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Mental Health by Age</h3>
+        <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-0dde">
+          <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+            <li data-u-target="#carousel-0dde" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+            <li data-u-target="#carousel-0dde" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+            <li data-u-target="#carousel-0dde" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+          </ol>
+          <div class="u-carousel-inner u-gallery-inner" role="listbox">
+            <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1">
+              <div class="u-back-slide" data-image-width="600" data-image-height="500">
+                <img class="u-back-image u-expanded" src="images/AnxietybyAge.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
+                <h3 class="u-gallery-heading">Sample Title</h3>
+                <p class="u-gallery-text">Sample Text</p>
+              </div>
+            </div>
+            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
+              <div class="u-back-slide" data-image-width="600" data-image-height="500">
+                <img class="u-back-image u-expanded" src="images/DepressionbyAge.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
+                <h3 class="u-gallery-heading">Sample Title</h3>
+                <p class="u-gallery-text">Sample Text</p>
+              </div>
+            </div>
+            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-3" data-image-width="600" data-image-height="500">
+              <div class="u-back-slide">
+                <img class="u-back-image u-expanded" src="images/PanicAttackbyAge.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+              <style data-mode="XL" data-visited="true"></style>
+              <style data-mode="LG" data-visited="true"></style>
+              <style data-mode="MD" data-visited="true"></style>
+              <style data-mode="SM"></style>
+              <style data-mode="XS" data-visited="true"></style>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-0dde" role="button" data-u-slide="prev">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-0dde" role="button" data-u-slide="next">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div>
+        <p class="u-text u-text-default-xl u-text-2">Grouping our dataset by their age we can observe that:</p>
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 515.556 515.556" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-69c0"></use></svg><svg class="u-svg-content" viewBox="0 0 515.556 515.556" id="svg-69c0"><path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"></path></svg>
+            
+            
+          </span>
+                <p class="u-text u-text-3">Many students in this University at the age of 18 and 24 years old have experienced feelings of anxiety, depression, and&nbsp; panic attack</p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 515.556 515.556" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e490"></use></svg><svg class="u-svg-content" viewBox="0 0 515.556 515.556" id="svg-e490"><path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"></path></svg>
+            
+            
+          </span>
+                <p class="u-text u-text-4">Those feelings are not so intensive for 20, 21, and 22 years old</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-6" id="sec-de62">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Mental Health by Year</h3>
+        <p class="u-text u-text-2">Grouping our dataset by the year that students are, we can observe that:</p>
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 515.556 515.556" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-25c1"></use></svg><svg class="u-svg-content" viewBox="0 0 515.556 515.556" id="svg-25c1"><path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"></path></svg>
+            
+            
+          </span>
+                <p class="u-text u-text-3">Students in their first years of study are experiencing more mental health problems</p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 515.556 515.556" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-42c2"></use></svg><svg class="u-svg-content" viewBox="0 0 515.556 515.556" id="svg-42c2"><path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"></path></svg>
+            
+            
+          </span>
+                <p class="u-text u-text-4">Those feelings are almost eliminated in the last year&nbsp;(year 4) of University. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-9458">
+          <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+            <li data-u-target="#carousel-9458" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+            <li data-u-target="#carousel-9458" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+            <li data-u-target="#carousel-9458" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+          </ol>
+          <div class="u-carousel-inner u-gallery-inner" role="listbox">
+            <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1" data-image-width="590" data-image-height="390">
+              <div class="u-back-slide" data-image-width="590" data-image-height="390">
+                <img class="u-back-image u-expanded" src="images/AnxietybyYear.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+              <style data-mode="XL" data-visited="true"></style>
+              <style data-mode="LG" data-visited="true"></style>
+              <style data-mode="MD" data-visited="true"></style>
+              <style data-mode="SM" data-visited="true"></style>
+              <style data-mode="XS" data-visited="true"></style>
+            </div>
+            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2" data-image-width="590" data-image-height="390">
+              <div class="u-back-slide">
+                <img class="u-back-image u-expanded" src="images/DepressionbyYear.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+              <style data-mode="XL" data-visited="true"></style>
+              <style data-mode="LG" data-visited="true"></style>
+              <style data-mode="MD" data-visited="true"></style>
+              <style data-mode="SM" data-visited="true"></style>
+              <style data-mode="XS" data-visited="true"></style>
+            </div>
+            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-3" data-image-width="590" data-image-height="390">
+              <div class="u-back-slide">
+                <img class="u-back-image u-expanded" src="images/PanicAttackbyYear.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+              <style data-mode="XL" data-visited="true"></style>
+              <style data-mode="LG" data-visited="true"></style>
+              <style data-mode="MD" data-visited="true"></style>
+              <style data-mode="SM" data-visited="true"></style>
+              <style data-mode="XS" data-visited="true"></style>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-9458" role="button" data-u-slide="prev">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-9458" role="button" data-u-slide="next">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-7" id="sec-e16c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Mental Health by CGPA</h3>
+        <p class="u-text u-text-2">Grouping our dataset by their grades, we can observe that:</p>
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 515.556 515.556" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a134"></use></svg><svg class="u-svg-content" viewBox="0 0 515.556 515.556" id="svg-a134"><path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"></path></svg>
+            
+            
+          </span>
+                <p class="u-text u-text-3">Students with bigger grades seems to have more poor mental health</p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 515.556 515.556" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e821"></use></svg><svg class="u-svg-content" viewBox="0 0 515.556 515.556" id="svg-e821"><path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"></path></svg>
+            
+            
+          </span>
+                <p class="u-text u-text-4">Student with lower grades do not develop so many bad feelings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-338e">
+          <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+            <li data-u-target="#carousel-338e" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+            <li data-u-target="#carousel-338e" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+            <li data-u-target="#carousel-338e" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+          </ol>
+          <div class="u-carousel-inner u-gallery-inner" role="listbox">
+            <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1" data-image-width="630" data-image-height="430">
+              <div class="u-back-slide">
+                <img class="u-back-image u-expanded" src="images/anxietyvsCGPA.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+              <style data-mode="XL" data-visited="true"></style>
+              <style data-mode="LG" data-visited="true"></style>
+              <style data-mode="MD" data-visited="true"></style>
+              <style data-mode="SM" data-visited="true"></style>
+              <style data-mode="XS" data-visited="true"></style>
+            </div>
+            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2" data-image-width="630" data-image-height="430">
+              <div class="u-back-slide">
+                <img class="u-back-image u-expanded" src="images/depressionvsCGPA.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+              <style data-mode="XL"></style>
+              <style data-mode="LG" data-visited="true"></style>
+              <style data-mode="MD" data-visited="true"></style>
+              <style data-mode="SM" data-visited="true"></style>
+              <style data-mode="XS" data-visited="true"></style>
+            </div>
+            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-3" data-image-width="630" data-image-height="430">
+              <div class="u-back-slide">
+                <img class="u-back-image u-expanded" src="images/panicattackvsCGPA.png">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+              <style data-mode="XL"></style>
+              <style data-mode="LG" data-visited="true"></style>
+              <style data-mode="MD" data-visited="true"></style>
+              <style data-mode="SM" data-visited="true"></style>
+              <style data-mode="XS" data-visited="true"></style>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-338e" role="button" data-u-slide="prev">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-338e" role="button" data-u-slide="next">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-8" id="sec-5418">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Specialist Treatment</h3>
+        <p class="u-text u-text-default u-text-2">According to World Health Organization (WHO), adolescence is a crucial period for developing social and emotional habits important for mental well-being. These include adopting healthy sleep patterns; exercising regularly; developing coping, problem-solving, and interpersonal skills; and learning to manage emotions. Protective and supportive environments in the family, at school and in the wider community are important.&nbsp;<br>
+          <br> In this survey, all the students that answered that they have mental health problems were also asked if they sought any specialist treatment. The outcome is rather disappointed as the majority of them didn't ask for help of any kind, as we can see from the outcomes below.
+        </p>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-9" id="sec-0a2a">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+          <div class="u-gallery-inner u-gallery-inner-1">
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="650" data-image-height="350">
+                <img class="u-back-image u-expanded" src="images/anxietyvsspecialisttreatment.png">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-1">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="650" data-image-height="350">
+                <img class="u-back-image u-expanded" src="images/depressionvsspecialisttreatment.png">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-2">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="650" data-image-height="350">
+                <img class="u-back-image u-expanded" src="images/panicattackvsspecialisttreatment.png">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-5 u-section-10" id="sec-1edb">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Solutions to address this issue</h3>
+        <p class="u-text u-text-default u-text-2">This is a problem that should be treated&nbsp;from a young age and everyone should be involved school, parents and families and healthcare providers.<br>
+          <br>
+          <span style="font-weight: 700;">What school can do:&nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+            <br>
+            <br>
+            <br>
+            <br>What families can do:&nbsp; &nbsp; &nbsp;&nbsp;<br>
+            <br>&nbsp; &nbsp;&nbsp;<br>
+            <br>
+            <br>
+            <br>
+            <br>What health care providers can do:
+          </span>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </p>
+        <ul class="u-text u-text-3">
+          <li> Linking students to mental health services.</li>
+          <li> Integrating social emotional learning.</li>
+          <li> Supporting staff mental health.</li>
+          <li>Building safe and supportive environments.<br>
+          </li>
+        </ul>
+        <ul class="u-text u-text-4">
+          <li> Communicate openly and honestly, including about their values.</li>
+          <li> Spend time with their adolescent enjoying shared activities.</li>
+          <li> Communicate regularly with teachers and administrators.</li>
+        </ul>
+        <ul class="u-text u-text-5">
+          <li> Encourage positive parenting practices.</li>
+          <li> Ask adolescents about family relationships and school experiences as a part of routine health screenings.</li>
+          <li> Educate parents and youth about adolescent development and health risks.</li>
+        </ul>
+        <p class="u-text u-text-6">More information:<br>
+          <br>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://www.cdc.gov/childrensmentalhealth/">Children’s Mental Health</a>
+          <br>
+          <a href="https://medlineplus.gov/teenmentalhealth.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Teen Mental Health</a>
+          <br>
+          <br>
+        </p>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-fb52"><div class="u-align-left u-clearfix u-sheet u-sheet-1"></div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Template</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/html-website-builder" target="_blank">
+        <span>HTML Website Builder</span>
+      </a>. 
+    </section>
+  </body>
+</html>
